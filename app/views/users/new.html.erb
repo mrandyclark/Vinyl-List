@@ -1,0 +1,37 @@
+<h2>Sign up</h2>
+<% form_for @user, users_path do |form| %>
+	<%= render "shared/error_messages", :target => @user %>  
+	<div id="signup-form">
+	    <fieldset class="inputs"><ol>
+			<li class="string required" id="user_email_input">
+				<label for="user_email">Email<abbr title="required">*</abbr></label>
+				<br/>
+				<%= form.text_field :email %>
+			</li>
+	  
+			<li class="password required" id="user_password_input">
+				<label for="user_password">Password <abbr title="required">*</abbr></label>
+				<br/>
+				<%= form.password_field :password %>
+			</li>
+	  
+			<li class="password required" id="user_password_confirmation_input">
+				<label for="user_password_confirmation">Confirm password<abbr title="required">*</abbr></label>
+				<br/>
+				<%= form.password_field :password_confirmation %>
+			</li>		  
+
+			<li class="string required" id="user_url_input">
+				<label for="user_url">Username<abbr title="required">*</abbr></label>
+				<br/>
+				<%= form.text_field :url %>
+			</li>
+		</fieldset>
+
+		<fieldset class="buttons"><ol> 
+			<div class="commit">
+				<input class="create" id="user_submit" name="commit" type="submit" value="Sign up" />
+			</div> 
+		</fieldset>
+	</div>
+<% end %>

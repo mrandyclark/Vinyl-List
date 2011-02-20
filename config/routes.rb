@@ -1,4 +1,6 @@
 Vinyllist::Application.routes.draw do
+  resources :albums
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -46,10 +48,20 @@ Vinyllist::Application.routes.draw do
   #     resources :products
   #   end
 
+
+  match 'sign_out',
+    :controller => 'clearance/sessions',
+    :action     => 'destroy',
+    :method     => :delete
+    
+  match 'AmazonSearch/:asin' => 'amazon_search#index'
+
+  match '/:url', :controller => "profile", :action => "profile"
+
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => "welcome#index"
-
+  root :to => "home#index"
+  
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.

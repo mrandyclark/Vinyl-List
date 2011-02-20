@@ -1,0 +1,24 @@
+<% if @profile_owner.owned_albums.length > 0 %>
+	<div>
+	<h2><%= @profile_owner.url %>'s album collection</h2>
+	<% if current_user == @profile_owner %>
+		<a href+add album to your collection
+	<% end %>
+	<ul>
+	<% @profile_owner.owned_albums.each do |album| %>
+		<li><%= album.album_name %> by <%= album.artist.name %></li>
+	<% end %>
+	</ul>
+	</div>
+<% end %>
+
+<% if @profile_owner.wanted_albums.length > 0 %>
+	<div>
+	<h2><%= @profile_owner.url %>'s want list</h2>
+	<ul>
+	<% @profile_owner.wanted_albums.each do |album| %>
+		<li><%= album.album_name %> by <%= album.artist.name %></li>
+	<% end %>
+	</ul>
+	</div>
+<% end %>

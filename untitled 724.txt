@@ -1,0 +1,81 @@
+
+/* site styles */
+
+body { background-color: black;
+		color: white;
+		font-family: Times, "Times New Roman";
+		font-size: 14px;}
+		
+a { font-style: italic; color: #666; text-decoration: none;}
+
+#head {
+	width: 129px;
+	height: 129px;
+	margin: 25px auto 20px auto;
+	background: transparent url('../images/logo.png') no-repeat;
+	text-indent: -99999px;
+}
+
+#comments { float: left; clear: both;}
+
+#main, #nav, #page-content { width: 700px; margin: 0px auto; overflow:hidden;}
+
+#main { border-bottom: 1px solid #666; padding-bottom: 15px; margin-bottom: 10px;}
+#nav ul { text-transform: uppercase; text-align: center;}
+
+#nav ul li {	display: inline; 
+				float: left;
+				font-family: Georgia;
+				font-size: 15px;
+				padding: 0px 14px; 
+}
+
+#nav ul li a { color: #fff; text-decoration: none; font-style: normal;}
+
+#nav ul li a.current { color: #666666;}
+
+#seperator { width: 700px; height: 15px; background: url('../images/seperator.png') no-repeat; margin: 15px 0px; float: left; clear: both;}
+
+#col1 { float: left; width: 320px;}
+#col2 { float: right; width: 320px;}
+
+
+/* home */
+#home-content { width: 486px; float: left;}
+#home-posts { float: left; clear: both;}
+#content { float: left;}
+#john { width: 486px; height: 296px; float: left; clear: both;}
+#sidebar { float: right; width: 185px;}
+#sidebar .section { border-top: 1px solid #666; margin-bottom: 10px; padding-top: 5px;}
+#social-links .icon { text-indent: -99999px;height: 17px; width: 17px; float: left; margin: 5px;}
+#social-links #twitter { background: #000 url('../images/social-logos.png') -28px 0px no-repeat;}
+#social-links #facebook { background: #000 url('../images/social-logos.png') 0px 0px no-repeat;}
+#social-links #myspace { background: #000 url('../images/social-logos.png') -55px 0px no-repeat;}
+
+/* bio */
+#bio-header { width: 625px; height: 322px; margin: 0px auto; clear: both;}
+#members { text-align: center; }
+
+/* contact */
+#contact { font-size: 18px; text-align: center;}
+#contact a { color: #fff; text-decoration: none; }
+
+/* photos */
+#photos { width: 498px; margin: 0px auto;}
+ul#photos-list li { float: left; padding: 4px 8px;}
+
+/*video */
+#video { padding: 20px; text-align: center;}
+
+/* tour */
+#tour { text-align: center;;}
+#tour-dates ol li { font-size: 14px; padding: 3px 0px; }
+#tour-dates ol li a { font-style: normal; color: #fff; }
+.tour-date-info { color: #000;}
+
+/* music */
+#album { float: left; width: 385px;}
+#album-info { float: right; width: 250px;}
+#album-info ol { padding-left: 15px; margin-left: 10px; list-style-type: decimal;}
+#share-facebook {float: left; clear: both; padding: 10px 0px;}
+#like-facebook { float: left; width: 374px; clear: both; margin-top: 15px; padding: 5px; background-color: #fff; overflow: hidden; height: 24px; line-height: 24px;}

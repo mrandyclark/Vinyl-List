@@ -1,0 +1,2 @@
+module AmazonSearchHelper
+end
