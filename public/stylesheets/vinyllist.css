@@ -22,3 +22,6 @@ a { text-decoration: none; color: #c37008;}
 .profile_content { float: left;}
 
 .form_input  { padding: 10px 0px;}
+
+/* profile */
+#profile_owner { text-align: center;}
