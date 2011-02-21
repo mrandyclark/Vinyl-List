@@ -1,24 +1,37 @@
-<% if @profile_owner.owned_albums.length > 0 %>
-	<div>
-	<h2><%= @profile_owner.url %>'s album collection</h2>
-	<% if current_user == @profile_owner %>
-		<a href+add album to your collection
-	<% end %>
-	<ul>
-	<% @profile_owner.owned_albums.each do |album| %>
-		<li><%= album.album_name %> by <%= album.artist.name %></li>
-	<% end %>
-	</ul>
-	</div>
-<% end %>
+<div class="content profile_content">
+	<%= image_tag(@gravatar_src) %>
+	<h2><%= @profile_owner.url %></h2>
+</div>
 
-<% if @profile_owner.wanted_albums.length > 0 %>
+<div class="content profile_content">
+<% if @owned_albums.length > 0 %>
 	<div>
-	<h2><%= @profile_owner.url %>'s want list</h2>
+		
+	<h3><%= @profile_owner.url %>'s album collection (<%= pluralize(@owned_albums.length, 'album') %>)</h3>
+	<% if current_user == @profile_owner %>
+		<a href="#">add album to your collection</a>
+	<% end %>
 	<ul>
-	<% @profile_owner.wanted_albums.each do |album| %>
+	<% @owned_albums.each do |album| %>
 		<li><%= album.album_name %> by <%= album.artist.name %></li>
 	<% end %>
 	</ul>
 	</div>
 <% end %>
+</div>
+
+<div class="content profile_content">
+<% if @wanted_albums.length > 0 %>
+	<div>
+	<h3><%= @profile_owner.url %>'s want list (<%= pluralize(@wanted_albums.length, 'album') %>)</h3>
+	<% if current_user == @profile_owner %>
+		<a href="#">add album to your want list</a>
+	<% end %>
+	<ul>
+	<% @wanted_albums.each do |album| %>
+		<li><%= album.album_name %> by <%= album.artist.name %></li>
+	<% end %>
+	</ul>
+	</div>
+<% end %>
+</div>

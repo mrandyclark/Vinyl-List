@@ -1,0 +1,24 @@
+body { background: #333 url('/images/records.jpg'); font-family: "verdana"; font-size: 11px;margin: 0px; padding: 0px; }
+
+h1 { font-size: 1.3em; font-weight: bold;}
+h2 { font-size: 1.2em; font-weight: bold;}
+h3 { font-size: 1.1em; font-weight: bold;}
+
+a { text-decoration: none; color: #c37008;}
+
+#nav { float: left; clear: both; width: 100%; background-color: #fff;}
+#nav ul { padding: 10px;}
+#nav ul li { display: inline; border-left: 1px solid #333; padding: 0px 2px 0px 7px ;}
+#nav ul li.first { border-left: 0px;}
+#nav #pages { float: left;}
+#nav #user_controls { float: right;}
+
+#beta { color: #176be0;}
+
+#main { float: left; clear: both; }
+
+.content { padding: 10px; margin: 15px; background-color: #fff;}
+
+.profile_content { float: left;}
+
+.form_input  { padding: 10px 0px;}

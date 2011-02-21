@@ -7,19 +7,28 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-	<ul>
-	<li><%= link_to "home", root_path %>
-	<% if signed_in? %>
-	<li>welcome, <%= current_user.email %></li>
-	<li><%= link_to "sign out", sign_out_path %></li>
-	
-	<% else %>
-		<li><%= link_to "sign in", sign_in_path %></li>
-		<li><%= link_to "sign up", sign_up_path %></li>
-	<% end %>
+<div id="nav">
+	<ul id="pages">
+		<li class="first">vinyllist <span id="beta">beta</span></li>
+		<li><%= link_to "home", root_path %></li>
+		<% if signed_in? %><li><%= link_to "your profile",  profile_path(:url => current_user.url)%></li><% end %>
 	</ul>
+	
+	<ul id="user_controls">
+		<% if signed_in? %>
+		<li class="first">welcome, <%= current_user.email %></li>
+		<li><%= link_to "sign out", sign_out_path %></li>
 
-<%= yield %>
+		<% else %>
+			<li class="first"><%= link_to "sign in", sign_in_path %></li>
+			<li><%= link_to "sign up", sign_up_path %></li>
+		<% end %>
+	</ul>
+</div>
+
+<div id="main">
+	<%= yield %>
+</div>
 
 </body>
 </html>

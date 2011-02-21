@@ -1,0 +1,19 @@
+<div class="content">
+	<h2>Sign in</h2>
+
+	<%= form_for :session, :url => session_path do |form| %>
+	  <div class="form_input text_field">
+	    <%= form.label :email, "email" %><br/>
+	    <%= form.text_field :email %>
+	  </div>
+	  <div class="form_input text_field">
+	    <%= form.label :password, "password" %><br/>
+	    <%= form.password_field :password %>
+	  </div>
+	  <div class="form_input submit_field">
+	    <%= form.submit "sign in" %>
+	  </div>
+	<% end %>
+
+	<%= link_to "sign up", sign_up_path %> | <%= link_to "forgot password?", new_password_path %>
+</div>

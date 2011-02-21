@@ -1,1 +1,6 @@
-what's up, welcome to vinyl list.
+<div class="content">
+	welcome to vinyl list.
+	<% if !signed_in? %>
+		<%= link_to "sign in", sign_in_path %> or <%= link_to "sign up", sign_up_path %>.
+	<% end %>
+</div>
